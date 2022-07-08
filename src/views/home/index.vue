@@ -11,14 +11,15 @@
     >
     <!-- 分类 -->
     <div class="sort">
-      <van-row>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <div class="item" v-for="item in categoryList" :key="item.categoryId">
+        <div class="img">
+          <img :src="item.imgUrl" />
+        </div>
+        <div>{{ item.name }}</div>
+      </div>
     </div>
     <!-- 列表 -->
-    <div class="list"></div>
+    <div class="list"> 商品 </div>
   </div>
 </template>
 
@@ -102,5 +103,28 @@
     line-height: 200px;
     text-align: center;
     background-color: #ccc;
+  }
+
+  .sort {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 13px;
+    background-color: #ccc;
+
+    .item {
+      width: 20%;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+      div {
+        font-size: 12px;
+        padding: 5px 0;
+      }
+    }
   }
 </style>
