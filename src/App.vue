@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <!-- 开启顶部安全区适配 -->
-    <van-nav-bar safe-area-inset-top />
-
-    <van-config-provider :theme-vars="themeVars">
+  <div style="height: 100%">
+    <van-config-provider style="height: 100%" :theme-vars="themeVars">
       <router-view />
     </van-config-provider>
     <!-- 开启底部安全区适配 -->

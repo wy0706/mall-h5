@@ -1,11 +1,5 @@
 import type { AppRouteModule } from '/@/router/types';
 import TabLay from '/@/layouts/TabHome/index.vue';
-
-// { title: "首页", to: "/home", icon: "home-o" },
-//   { title: "分类", to: "/home", icon: "label-o" },
-//   { title: "购物车", to: "/cart", icon: "cart-o" },
-//   { title: "我", to: "/my", icon: "user-o" },
-
 const home: AppRouteModule = {
   path: '/',
   name: 'Home',
